@@ -1,0 +1,300 @@
+
+#root {
+    min-height: 100vh;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+/* Login and Register */
+
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #222;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-container input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.auth-container input:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.auth-container button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.auth-container button:hover {
+    background-color: #555;
+}
+
+.auth-container button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.auth-container p {
+    text-align: center;
+    color: #555;
+}
+
+.auth-container .error-message {
+    color: #d32f2f;
+    font-size: 14px;
+    white-space: pre-line;
+}
+
+.auth-container .success-message {
+    color: #2e7d32;
+    font-size: 14px;
+}
+
+
+/* Movie page */
+
+.movie-app {
+    align-items: flex-start;
+}
+
+.movie-page {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 80vh;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.movie-page > button {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+.movie-list {
+    width: 100%;
+}
+
+.movie-list button {
+    margin-bottom: 20px;
+}
+
+.movie-list h1 {
+    margin: 20px 0 30px;
+    text-align: center;
+    color: #222;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.movie-card {
+    overflow: hidden;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.movie-poster {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+}
+
+.movie-card-content {
+    padding: 12px 3px 3px;
+}
+
+.movie-card-content h2 {
+    margin: 8px 0 12px;
+    color: #222;
+}
+
+.movie-card-content p {
+    line-height: 1.5;
+    color: #555;
+}
+
+.movie-page button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.movie-page button:hover {
+    background-color: #555;
+}
+
+.movie-card button {
+    margin-top: 10px;
+}
+
+.add-movie-form {
+    max-width: 550px;
+    margin: 25px auto;
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.add-movie-form h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #222;
+}
+
+.add-movie-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.add-movie-form input,
+.add-movie-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.add-movie-form input:focus,
+.add-movie-form textarea:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.add-movie-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.add-movie-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.add-movie-form button:hover {
+    background-color: #555;
+}
+
+.error-message {
+    color: #d32f2f;
+    white-space: pre-line;
+}
+
+/* Responsive layout */
+
+@media (max-width: 850px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .movie-page {
+        padding: 15px;
+    }
+
+    .movie-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .movie-poster {
+        height: 320px;
+    }
+}
+
+.movie-card {
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.movie-card .remove-movie-button {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+
+    width: 32px;
+    height: 32px;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.movie-card .remove-movie-button:hover {
+    background-color: #b71c1c;
+}

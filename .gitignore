@@ -1,0 +1,11 @@
+.vs/
+**/bin/
+**/obj/
+**/node_modules/
+client/dist/
+
+.env
+.env.*
+**/appsettings.Development.json
+
+*.csproj.user
